@@ -1,0 +1,26 @@
+<div class="login" ng-controller= "MainController as ctrl">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Log in</h2>
+
+
+    <form class="login-container">
+        <p><input ng-model="ctrl.userDetails.username" type="email" placeholder="Email"></p>
+        <p><input ng-model="ctrl.userDetails.password" type="password" placeholder="Password"></p>
+        <p><input type="submit" value="Log in" ng-click="ctrl.display()"></p>
+    </form>
+
+    <table>
+        <thead>
+        <th>sl/no</th>
+        <th>Name</th>
+        <th>Description</th>
+        </thead>
+        <tbody ng-repeat="item in ctrl.items;">
+        <td> {{$index + 1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        </tbody>
+    </table>
+
+</div>
